@@ -1,0 +1,94 @@
+{
+  "platform": "VisionGuard AI \u2013 Model Evaluation Suite",
+  "yolo_defect_localization": {
+    "model_architecture": "YOLOv8-Nano Defect Localization",
+    "input_resolution": "512x512",
+    "epochs_trained": 12,
+    "classes": [
+      "scratch",
+      "crack",
+      "hole",
+      "surface_abnormality",
+      "contamination",
+      "deformation"
+    ],
+    "overall_metrics": {
+      "precision": 0.7557,
+      "recall": 0.7912,
+      "f1_score": 0.773,
+      "mAP50": 0.8717,
+      "mAP50_95": 0.6575
+    },
+    "latency_benchmark": {
+      "avg_inference_ms": 51.15,
+      "p95_inference_ms": 58.05,
+      "throughput_fps": 19.6
+    },
+    "per_class_metrics": {
+      "scratch": {
+        "precision": 0.5323,
+        "recall": 0.5,
+        "f1_score": 0.5156,
+        "mAP50": 0.745
+      },
+      "crack": {
+        "precision": 0.8243,
+        "recall": 1.0,
+        "f1_score": 0.9037,
+        "mAP50": 0.995
+      },
+      "hole": {
+        "precision": 1.0,
+        "recall": 0.9137,
+        "f1_score": 0.9549,
+        "mAP50": 0.995
+      },
+      "surface_abnormality": {
+        "precision": 0.9282,
+        "recall": 1.0,
+        "f1_score": 0.9628,
+        "mAP50": 0.995
+      },
+      "contamination": {
+        "precision": 0.5228,
+        "recall": 0.3333,
+        "f1_score": 0.4071,
+        "mAP50": 0.5049
+      },
+      "deformation": {
+        "precision": 0.7264,
+        "recall": 1.0,
+        "f1_score": 0.8415,
+        "mAP50": 0.995
+      }
+    },
+    "weights_path": "D:/Python Projects/2.VisonGuardAI/backend/app/models_storage/yolov8_defect.pt",
+    "timestamp": "2026-11-24 22:36:19"
+  },
+  "unsupervised_anomaly_detection": {
+    "model_architecture": "PatchCore Deep Feature Memory Bank (ResNet18 backbone)",
+    "approach": "Unsupervised / Zero-Shot Anomaly Detection for Unseen Defects",
+    "device": "cpu",
+    "metrics": {
+      "roc_auc": 0.9966,
+      "precision": 0.98,
+      "recall": 1.0,
+      "f1_score": 0.9899,
+      "optimal_threshold": 0.2532
+    },
+    "latency_benchmark": {
+      "avg_inference_ms": 56.68,
+      "throughput_fps": 17.6
+    },
+    "total_test_evaluated": 116,
+    "anomalous_samples": 98,
+    "nominal_samples": 18,
+    "timestamp": "2026-11-24 22:31:33"
+  },
+  "combined_pipeline": {
+    "dual_stage_inspection": "YOLO Defect Localization + PatchCore Anomaly Memory Bank",
+    "combined_throughput_fps": 9.3,
+    "total_inspection_time_ms": 107.83,
+    "safety_critical_defect_recall": "100.0%"
+  }
+}

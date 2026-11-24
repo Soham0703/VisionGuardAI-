@@ -1,0 +1,20 @@
+{
+  "model_architecture": "PatchCore Deep Feature Memory Bank (ResNet18 backbone)",
+  "approach": "Unsupervised / Zero-Shot Anomaly Detection for Unseen Defects",
+  "device": "cpu",
+  "metrics": {
+    "roc_auc": 0.9966,
+    "precision": 0.98,
+    "recall": 1.0,
+    "f1_score": 0.9899,
+    "optimal_threshold": 0.2532
+  },
+  "latency_benchmark": {
+    "avg_inference_ms": 56.68,
+    "throughput_fps": 17.6
+  },
+  "total_test_evaluated": 116,
+  "anomalous_samples": 98,
+  "nominal_samples": 18,
+  "timestamp": "2026-11-24 22:31:33"
+}

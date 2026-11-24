@@ -1,0 +1,57 @@
+{
+  "total_samples": 160,
+  "classes": [
+    "scratch",
+    "crack",
+    "hole",
+    "surface_abnormality",
+    "contamination",
+    "deformation"
+  ],
+  "splits": {
+    "train": {
+      "good": 44,
+      "defective": 56,
+      "by_class": {
+        "scratch": 13,
+        "crack": 8,
+        "hole": 3,
+        "surface_abnormality": 10,
+        "contamination": 10,
+        "deformation": 12
+      }
+    },
+    "val": {
+      "good": 8,
+      "defective": 22,
+      "by_class": {
+        "scratch": 4,
+        "crack": 5,
+        "hole": 5,
+        "surface_abnormality": 1,
+        "contamination": 3,
+        "deformation": 4
+      }
+    },
+    "test": {
+      "good": 10,
+      "defective": 20,
+      "by_class": {
+        "scratch": 3,
+        "crack": 4,
+        "hole": 5,
+        "surface_abnormality": 2,
+        "contamination": 3,
+        "deformation": 3
+      }
+    }
+  },
+  "category_counts": {
+    "deformation": 19,
+    "scratch": 20,
+    "contamination": 16,
+    "crack": 17,
+    "surface_abnormality": 13,
+    "hole": 13
+  }
+}

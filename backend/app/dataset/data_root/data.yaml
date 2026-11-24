@@ -1,0 +1,8 @@
+# VisionGuard AI Industrial Defect Dataset
+path: D:/Python Projects/2.VisonGuardAI/backend/app/dataset/data_root
+train: train/images
+val: val/images
+test: test/images
+
+nc: 6
+names: ['scratch', 'crack', 'hole', 'surface_abnormality', 'contamination', 'deformation']
